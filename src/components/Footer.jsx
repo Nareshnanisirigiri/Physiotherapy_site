@@ -8,7 +8,7 @@ import {
   Button,
   Stack,
 } from "@mui/material";
-import { color, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";

@@ -234,7 +234,7 @@ export default function Hero() {
         <Grid container spacing={4} alignItems="center">
 
           {/* LEFT CONTENT */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} mt={4}>
             <motion.div
               initial="hidden"
               animate="visible"
