@@ -210,7 +210,8 @@ export default function Hero() {
         alignItems: "center",
         background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, rgba(131,197,190,0.15) 100%)`,
         position: "relative",
-        pt: { xs: 8, md: 0 },
+        pt: { xs: "120px", md: "150px" }, // Added more padding to clear 90px fixed navbar
+        pb: { xs: 8, md: 12 },
       }}
     >
       {/* Decorative Blur Circle */}
@@ -302,7 +303,7 @@ export default function Hero() {
                   <Button
                     variant="outlined"
                     size="large"
-                    sx={{ py: 1.5, px: 4, borderRadius: "30px", color: "black",  }}
+                    sx={{ py: 1.5, px: 4, borderRadius: "30px", color: "black", }}
                   >
                     View Services
                   </Button>
@@ -360,7 +361,7 @@ export default function Hero() {
               >
                 <Box
                   component="img"
-                  src={Image1} 
+                  src={Image1}
                   sx={{ width: "600px", height: "650px", objectFit: "cover" }}
                   alt="Physiotherapy"
                 />

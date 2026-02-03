@@ -60,14 +60,23 @@ export default function Navbar() {
         <Toolbar sx={{ minHeight: 90, display: "flex", justifyContent: "space-between", px: 3 }}>
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }}>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Box component="img" src={Logo} alt="logo" sx={{ height: 70 }} />
-              <Typography fontWeight={800}>Sri Sai Priya Physiotherapy</Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 1, lg: 1.5 } }}>
+              <Box component="img" src={Logo} alt="logo" sx={{ height: { xs: 45, sm: 55, md: 65, lg: 70 } }} />
+              <Typography
+                fontWeight={800}
+                sx={{
+                  fontSize: { xs: "0.8rem", sm: "1rem", md: "1.2rem" },
+                  whiteSpace: "nowrap",
+                  display: { xs: "none", sm: "block" }
+                }}
+              >
+                Sri Sai Priya Physiotherapy
+              </Typography>
             </Box>
           </motion.div>
 
           {/* Nav Links */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: { md: 1.5, lg: 3 } }}>
             {navItems.map((item, index) => (
               <Button
                 key={index}
@@ -77,6 +86,9 @@ export default function Navbar() {
                   color: theme.palette.text.primary,
                   fontWeight: 700,
                   textTransform: "none",
+                  fontSize: { md: "0.85rem", lg: "1rem" },
+                  minWidth: "auto",
+                  px: 1,
                 }}
               >
                 {item.label}
@@ -87,9 +99,16 @@ export default function Navbar() {
             <Box>
               <Button
                 onMouseEnter={(e) => setAnchorEl(e.currentTarget)}
-                sx={{ fontWeight: 700, color: theme.palette.text.primary }}
+                sx={{
+                  fontWeight: 700,
+                  color: theme.palette.text.primary,
+                  textTransform: "none",
+                  fontSize: { md: "0.85rem", lg: "1rem" },
+                  minWidth: "auto",
+                  px: 1,
+                }}
               >
-                Physiotherapy ▾
+                PHYSIOTHERAPY ▾
               </Button>
 
               <AnimatePresence>
@@ -134,22 +153,29 @@ export default function Navbar() {
             </Box>
 
             {/* CTA */}
-            <motion.div whileHover={{ scale: 1.1 }}>
+            <motion.div whileHover={{ scale: 1.05 }}>
               <Button
                 component={NavLink}
                 to="/contact"
                 sx={{
                   borderRadius: "30px",
-                  px: 3.5,
-                  py: 1.2,
+                  px: { md: 2, lg: 3.5 },
+                  py: 1,
                   fontWeight: 800,
+                  fontSize: { md: "0.8rem", lg: "0.9rem" },
                   background: `linear-gradient(45deg,
                     ${theme.palette.primary.main},
                     ${theme.palette.secondary.main})`,
                   color: "#fff",
+                  whiteSpace: "nowrap",
+                  "&:hover": {
+                    background: `linear-gradient(45deg,
+                      ${theme.palette.secondary.main},
+                      ${theme.palette.primary.main})`,
+                  }
                 }}
               >
-                Book Appointment
+                BOOK APPOINTMENT
               </Button>
             </motion.div>
           </Box>
