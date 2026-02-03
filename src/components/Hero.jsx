@@ -58,7 +58,7 @@ export default function Hero() {
         <Grid container spacing={4} alignItems="center">
 
           {/* LEFT CONTENT */}
-          <Grid item xs={12} md={6} mt={4}>
+          <Grid item xs={12} sm={6} md={6} mt={4}>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -156,7 +156,7 @@ export default function Hero() {
           </Grid>
 
           {/* RIGHT IMAGE */}
-          <Grid item xs={12} md={6} sx={{ position: "relative", height: { xs: "auto", md: "80vh" } }}>
+          <Grid item xs={12} sm={6} md={6} sx={{ position: "relative", height: { xs: "auto", md: "80vh" } }}>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
