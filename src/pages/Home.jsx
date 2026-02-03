@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* Auto Sliding Images */}
-      <ImageSlider />
+      {/* ImageSlider removed to match local layout preference */}
 
       <Hero />
       <About />
