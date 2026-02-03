@@ -405,14 +405,21 @@ export default function Services() {
             </Typography>
           </motion.div>
         </Box>
-        {/* Services Grid */}
-        <Grid container spacing={4}>
+        {/* Manual Flexbox Grid for Robust 2-Column Layout */}
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4, justifyContent: "center" }}>
           {treatments.map((treatment, index) => (
-            <Grid item xs={12} sm={6} md={6} lg={6} key={treatment.id}>
+            <Box
+              key={treatment.id}
+              sx={{
+                width: { xs: "100%", md: "calc(50% - 32px)" }, // Force 2 columns on desktop (accounting for gap)
+                flexGrow: 0,
+                flexShrink: 0
+              }}
+            >
               <TiltCard treatment={treatment} index={index} />
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );
