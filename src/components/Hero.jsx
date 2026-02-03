@@ -55,11 +55,11 @@ export default function Hero() {
       />
 
       <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1 }}>
-        <Box sx={{ position: "absolute", top: 0, left: 0, opacity: 0.3, fontSize: "10px" }}>v0.1.5</Box>
-        <Grid container spacing={2} alignItems="center">
+        {/* Manual Flexbox Layout to FORCE Side-by-Side */}
+        <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", gap: 4 }}>
 
-          {/* LEFT CONTENT */}
-          <Grid item xs={12} sm={6} md={6} mt={4}>
+          {/* LEFT CONTENT (50% width on Desktop) */}
+          <Box sx={{ flex: 1, width: { xs: "100%", md: "50%" }, mt: 4 }}>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -154,10 +154,10 @@ export default function Hero() {
                 </Box>
               </motion.div>
             </motion.div>
-          </Grid>
+          </Box>
 
-          {/* RIGHT IMAGE */}
-          <Grid item xs={12} sm={6} md={6} sx={{ position: "relative", height: { xs: "auto", md: "80vh" } }}>
+          {/* RIGHT IMAGE (50% width on Desktop) */}
+          <Box sx={{ flex: 1, width: { xs: "100%", md: "50%" }, position: "relative", height: { xs: "auto", md: "80vh" } }}>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -254,9 +254,9 @@ export default function Hero() {
               </Box>
 
             </motion.div>
-          </Grid>
+          </Box>
 
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );
