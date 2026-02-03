@@ -408,7 +408,7 @@ export default function Services() {
         {/* Services Grid */}
         <Grid container spacing={4}>
           {treatments.map((treatment, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={treatment.id}>
+            <Grid item xs={12} sm={6} md={6} lg={6} key={treatment.id}>
               <TiltCard treatment={treatment} index={index} />
             </Grid>
           ))}
