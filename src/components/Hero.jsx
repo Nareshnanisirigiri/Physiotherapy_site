@@ -210,7 +210,7 @@ export default function Hero() {
         alignItems: "center",
         background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, rgba(131,197,190,0.15) 100%)`,
         position: "relative",
-        pt: { xs: "30px", md: "25px" }, // Adjusted to clear 90px navbar while reducing extra space
+        pt: { xs: "120px", md: "30px" }, // Guaranteed clearance of 90px navbar
         pb: { xs: 8, md: 12 },
       }}
     >

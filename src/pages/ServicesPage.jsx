@@ -295,8 +295,7 @@ const TiltCard = ({ treatment, index }) => {
       <Card
         sx={{
           height: "450px",
-          width: "600px",
-          ml:5,
+          width: "100%", // Changed from 600px to fill grid container
           display: "flex",
           flexDirection: "column",
           borderRadius: 4,
@@ -316,7 +315,7 @@ const TiltCard = ({ treatment, index }) => {
         {/* Image */}
         <CardMedia
           component="img"
-          height="180px" 
+          height="180px"
           image={treatment.img}
           alt={treatment.title}
           sx={{ objectFit: "cover" }}
