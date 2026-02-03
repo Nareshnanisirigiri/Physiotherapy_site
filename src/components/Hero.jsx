@@ -30,12 +30,10 @@ export default function Hero() {
         overflow: "hidden",
         minHeight: "90vh",
         display: "flex",
-        alignItems: "flex-start", // Changed from center to strict top alignment
+        alignItems: "center",
         background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, rgba(131,197,190,0.15) 100%)`,
         position: "relative",
-        // xs: 8 (64px) + mt: 4 (32px) = 96px (Fits on mobile)
-        // md: 150px (Fits on desktop)
-        pt: { xs: 8, md: "150px" },
+        pt: { xs: 8, md: 0 },
         pb: { xs: 8, md: 12 },
       }}
     >

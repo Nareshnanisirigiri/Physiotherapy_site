@@ -1,6 +1,6 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider, CssBaseline, IconButton } from "@mui/material";
+import { ThemeProvider, CssBaseline, IconButton, Toolbar } from "@mui/material";
 import { useState, useEffect } from "react";
 import { lightTheme, darkTheme } from "./theme";
 
@@ -57,16 +57,19 @@ export default function App() {
             <DarkModeIcon />
           </IconButton>
 
+          {/* Spacer for fixed Navbar */}
+          <Toolbar sx={{ minHeight: "90px !important" }} />
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/Treatment" element={<TreatmentPage />} />
             <Route path="/AboutPage" element={<AboutPage />} />
-                    <Route path="/treatment/:treatmentName" element={<TreatmentDetail />} />
-                    <Route path="/physio-treatment/:treatmentName" element={<AboutTreatmentDetail />} />
-<Route path="/physiotherapy/:slug" element={<PhysioDetails />} />
-<Route path="/service/:id" element={<ServiceDetails />} />
+            <Route path="/treatment/:treatmentName" element={<TreatmentDetail />} />
+            <Route path="/physio-treatment/:treatmentName" element={<AboutTreatmentDetail />} />
+            <Route path="/physiotherapy/:slug" element={<PhysioDetails />} />
+            <Route path="/service/:id" element={<ServiceDetails />} />
 
 
 
