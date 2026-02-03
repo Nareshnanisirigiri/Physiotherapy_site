@@ -35,8 +35,9 @@ export default function Services() {
               <Card
                 sx={{
                   height: "100%",
-                  width: "100%", // Fit grid item
+                  width: "350px",
                   textAlign: "center",
+                  marginLeft: "50px",
                   borderRadius: 3,
                   boxShadow: 3,
                   py: 4,
