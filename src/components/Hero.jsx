@@ -210,7 +210,7 @@ export default function Hero() {
         alignItems: "center",
         background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, rgba(131,197,190,0.15) 100%)`,
         position: "relative",
-        pt: { xs: "120px", md: "25px" }, // Guaranteed clearance of 90px navbar
+        pt: { xs: "120px", md: "120px" }, // Same padding for all sizes - fixes Vercel overlap
         pb: { xs: 8, md: 12 },
       }}
     >
