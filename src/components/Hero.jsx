@@ -210,7 +210,7 @@ export default function Hero() {
         alignItems: "center",
         background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, rgba(131,197,190,0.15) 100%)`,
         position: "relative",
-        pt: { xs: "120px", md: "150px" }, // Guaranteed clearance of 90px navbar
+        pt: { xs: "120px", md: "25px" }, // Guaranteed clearance of 90px navbar
         pb: { xs: 8, md: 12 },
       }}
     >
@@ -362,7 +362,7 @@ export default function Hero() {
                 <Box
                   component="img"
                   src={Image1}
-                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  sx={{ width: "600px", height: "650px", objectFit: "cover" }}
                   alt="Physiotherapy"
                 />
               </Box>
