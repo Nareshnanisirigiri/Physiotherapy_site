@@ -108,7 +108,7 @@ export default function Navbar() {
                   px: 1,
                 }}
               >
-                PHYSIOTHERAPY ▾
+                Physiotherapy ▾
               </Button>
 
               <AnimatePresence>
@@ -168,14 +168,9 @@ export default function Navbar() {
                     ${theme.palette.secondary.main})`,
                   color: "#fff",
                   whiteSpace: "nowrap",
-                  "&:hover": {
-                    background: `linear-gradient(45deg,
-                      ${theme.palette.secondary.main},
-                      ${theme.palette.primary.main})`,
-                  }
                 }}
               >
-                BOOK APPOINTMENT
+                Book Appointment
               </Button>
             </motion.div>
           </Box>
