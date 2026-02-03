@@ -295,7 +295,8 @@ const TiltCard = ({ treatment, index }) => {
       <Card
         sx={{
           height: "450px",
-          width: "100%", // Changed from 600px to fill grid container
+          width: "600px",
+          ml: 5,
           display: "flex",
           flexDirection: "column",
           borderRadius: 4,
