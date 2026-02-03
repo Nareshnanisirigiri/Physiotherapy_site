@@ -55,7 +55,8 @@ export default function Hero() {
       />
 
       <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1 }}>
-        <Grid container spacing={4} alignItems="center">
+        <Box sx={{ position: "absolute", top: 0, left: 0, opacity: 0.3, fontSize: "10px" }}>v0.1.5</Box>
+        <Grid container spacing={2} alignItems="center">
 
           {/* LEFT CONTENT */}
           <Grid item xs={12} sm={6} md={6} mt={4}>
